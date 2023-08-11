@@ -22,23 +22,14 @@ public class MainActivity extends AppCompatActivity {
         rg = findViewById(R.id.radioGroup01);
         rb1 = findViewById(R.id.radio01);
         rb2 = findViewById(R.id.radio02);
-        rg.setOnCheckedChangeListener((group, checkedId) -> {
-            switch(group.indexOfChild(findViewById(checkedId))) {
-                case 0:
-                    Toast.makeText(getApplicationContext(), R.string.msg_change1, Toast.LENGTH_SHORT).show();
-                    break;
-                case 1:
-                    Toast.makeText(getApplicationContext(), R.string.msg_change2, Toast.LENGTH_SHORT).show();
-                    break;
-            }
-        });
+
     }
 
     public void onSelectButtonClicked(View view) {
         if(rb1.isChecked() == true) {
-            Toast.makeText(getApplicationContext(), R.string.msg_button1, Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "남성", Toast.LENGTH_LONG).show();
         }else{
-            Toast.makeText(getApplicationContext(), R.string.msg_button2, Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "여성", Toast.LENGTH_LONG).show();
         }
     }
 }
